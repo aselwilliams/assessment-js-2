@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -31,8 +30,14 @@
 */
 
 //CODE HERE
-
-
+const pizza = {
+  name: "Margherita",
+  price: 12,
+  category: "entree",
+  popularity: 10,
+  rating: 8,
+  tags: ["kids food", "vegetarian"],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -43,7 +48,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +58,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +68,8 @@
 */
 
 //CODE HERE
-
+const { price } = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +79,8 @@
 */
 
 //CODE HERE
-
+const { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,8 +95,71 @@
 */
 
 //CODE HERE
+//preferred way of creating multiple objects and then pushing them into foodArr
+// class Food {
+//   constructor(name, price, category, popularity, rating, tags) {
+//     this.name = name;
+//     this.price = price;
+//     this.category = category;
+//     this.popularity = popularity;
+//     this.rating = rating;
+//     this.tags = tags;
+//   }
+// }
 
+// let salad = new Food('Greek salad', 8, 'appetizer', 7, 7, ['vagetarian', 'healthy'])
+// let newPizza = new Food('Hawaiian', 16, 'entree', 9, 9, ['exotic', 'kids-friendly'])
+// let spaghetti = new Food('Spaghetti bolognese', 5, 'entree', 9, 7, ['kids-friendly', 'family food'])
+// let burger = new Food('Cheeseburger', 7, 'entree', 9, 10, ['kids-friendly', 'fast food'])
+// let steak = new Food('Ribey steak', 22, 'entree', 9, 8, ['healthy', 'protein-rich'])
 
+// const foodArr = []
+//   foodArr.push(salad, newPizza, spaghetti, burger, steak)
+// console.log(foodArr)
+
+//second way is hard-coded way when you type all objects in array
+const foodArr = [
+  {
+    name: "Greek salad",
+    price: 8,
+    category: "appetizer",
+    popularity: 7,
+    rating: 7,
+    tags: ["vagetarian", "healthy"],
+  },
+  {
+    name: "Hawaiian pizza",
+    price: 16,
+    category: "entree",
+    popularity: 9,
+    rating: 9,
+    tags: ["exotic", "kids-friendly"],
+  },
+  {
+    name: "Spaghetti bolognese",
+    price: 5,
+    category: "entree",
+    popularity: 9,
+    rating: 7,
+    tags: ["kids-friendly", "family food"],
+  },
+  {
+    name: "Cheeseburger",
+    price: 7,
+    category: "entree",
+    popularity: 9,
+    rating: 10,
+    tags: ["kids-friendly", "fast food"],
+  },
+  {
+    name: "Ribey steak",
+    price: 22,
+    category: "entree",
+    popularity: 9,
+    rating: 8,
+    tags: ["healthy", "protein-rich"],
+  },
+];
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,9 +175,8 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
+ const filteredFood = foodArr.filter((food)=> food.tags.includes('kids-friendly'))
+ console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,8 +218,16 @@
 */
 
 //CODE HERE
-
-
+const filterByProperty = (property, number, type) => {
+    let filteredArr = foodArr.filter((food)=> {
+        if(type === 'above') {
+            return food[property] > number
+        } else if(type === 'below'){
+            return food[property] < number
+        }
+    })
+return filteredArr
+}
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -159,3 +236,5 @@
 */
 
 //CODE HERE
+console.log(filterByProperty('rating', 7, 'above'))
+console.log(filterByProperty('price', 10, 'below'))
