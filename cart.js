@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,24 +18,24 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: "pizza",
+    price: 9.99,
+  },
+  {
+    name: "pasta",
+    price: 8.99,
+  },
+  {
+    name: "salad",
+    price: 7.99,
+  },
+];
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, 0);
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +53,12 @@ const cart = [
 */
 
 //CODE HERE
-
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+  let taxAmount = cartTotal * tax;
+  console.log(taxAmount);
+  return cartTotal + taxAmount - couponValue;
+};
+console.log(calcFinalPrice(summedPrice, 2, 0.1));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -79,7 +82,13 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+We need following properties:
+[name : string]  to get the order and record who placed the order,
+[phone : number]  to contact the customer incase of issue with order,
+[address : string]  to check if we deliver the order to them,
+[age : number]  for the restaurant owners to analyze the demand and maybe modify the menu accordingly,
+[sendNewsLetter : boolean]  check if the customer wants to get rewards, hear about upcoming deals,
+[email : string] for marketing purposes and remind the customer about promo actions
 */
 
 /*
@@ -88,3 +97,11 @@ const cart = [
 */
 
 //CODE HERE
+const customerObject = {
+  name: "Aaron Smith",
+  phone: 3031245876,
+  address: "213 Camden str, Detroit, MI 48213",
+  age: 37,
+  sendNewsLetter: true,
+  email: "a.smith@gmail.com",
+};
