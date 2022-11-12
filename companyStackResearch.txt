@@ -1,0 +1,47 @@
+                            Google
+Google is an American multinational technology company focusing on search engine technology, online advertising, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics.
+
+Google uses the following tech stack:
+Programming/scripting languages - JavaScript, HTML, and CSS, Java, C/C++, Python, Ruby,Android SDK, Go, Preact, Kubernetes
+JavaScript frameworks - Backbone, Angular or Ember
+CSS pre-processing frameworks - Sass or Less
+machine learning algorithms and tools - TensorFlow 
+
+So many more technologies are found in the links below
+https://www.apxor.com/blog/what-is-a-tech-stack
+
+https://www.crunchbase.com/organization/google/technology
+
+                            Microsoft
+Microsoft Corporation is an American multinational technology corporation producing computer software, consumer electronics, personal computers, and related services headquartered at the Microsoft Redmond campus located in Redmond, Washington, United States.
+
+Microsoft uses the following tech stack:
+Programming/scripting languages - JavaScript, HTML, CSS, Typescript, node.js C/C++,  C#, .NET, Azure stack, gRPC,
+JavaScript frameworks - React, Angular,React Native
+Testing tool - Jest
+Web and API development - .NET stack
+Cloud - Microsoft Azure
+Statistics/machine learning languages - Python, R, Azure ML
+Reporting tools - Power BI
+pre-processing and analyzing data using - SQL , GraphQL, 
+
+So many more technologies are found in the links below
+https://www.claysys.com/blog/microsoft-technology-stack/
+
+https://stackshare.io/microsoft/microsoft
+
+                            Facebook
+Facebook is an online social media and social networking service owned by American company Meta Platforms. Facebook manages to handle over two billion active users.
+
+Facebook Technology Stack – PHP, React, GraphQL, Memcached, Cassandra, Hadoop, Swift, C++, PHP, JavaScript, JSON, HTML, CSS, Linux, HipHop for PHP and HipHop Virtual Machine (HHVM), Haystack, BigPipe, Cassandra (Instagram), Scribe, Hadoop and Hive, Thrift, Varnish, MySQL, Memcached
+
+
+Facebook’s Scaling Challenge
+Facebook had 2.3 billion users as of Q4 2018 (the service is available in over 100 languages)
+Every 60 seconds: 317 thousand status updates are added, 147 thousand photos are uploaded, and 54 thousand links are shared on Facebook
+Facebook users generate 8 billion video views per day on average, 20% of which are live broadcast
+In 2018, Facebook had 15 million square feet of data center space among its 15 campuses around the globe that host millions of servers
+
+https://www.pingdom.com/blog/the-software-behind-facebook/
+
+https://stackshare.io/facebook/facebook
